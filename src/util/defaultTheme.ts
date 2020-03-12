@@ -10,7 +10,7 @@ import {
 } from '../types/theme';
 
 const defaultColors: IColors = {
-  primary: '#000000',
+  primary: '#ffffff',
   primaryVariant: '#F8F8F9',
   secondary: '#ef3b7d',
   secondaryVariant: '#ec5990',
@@ -39,8 +39,8 @@ const defaultSpacing: ISpacing = {
 };
 
 const defaultFontFamily: IFontFamily = {
-  primary: 'Arial',
-  secondary: 'Muli',
+  primary: "'Roboto', sans-serif",
+  secondary: "'Anton', sans-serif",
 };
 
 const defaultFontWeight: IFontWeight = {
@@ -52,136 +52,64 @@ const defaultFontWeight: IFontWeight = {
 const h1: Font = {
   family: defaultFontFamily.secondary,
   weight: defaultFontWeight.bold,
-  size: 1.875,
+  size: 2.875,
   lineHeight: 1.25,
-  mediaQueries: [
-    {
-      query: defaultMediaQueries.small,
-      weight: defaultFontWeight.bold,
-      size: 3.125,
-      lineHeight: 1.15,
-    },
-  ],
 };
 
 const h2: Font = {
   family: defaultFontFamily.secondary,
   weight: defaultFontWeight.bold,
-  size: 1.5625,
+  size: 2.5625,
   lineHeight: 1.15,
-  mediaQueries: [
-    {
-      query: defaultMediaQueries.small,
-      weight: defaultFontWeight.bold,
-      size: 2.1875,
-      lineHeight: 1.15,
-    },
-  ],
 };
 
 const h3: Font = {
-  family: defaultFontFamily.secondary,
+  family: defaultFontFamily.primary,
   weight: defaultFontWeight.bold,
-  size: 1.25,
+  size: 2.25,
   lineHeight: 1.15,
-  mediaQueries: [
-    {
-      query: defaultMediaQueries.small,
-      weight: defaultFontWeight.bold,
-      size: 1.5625,
-      lineHeight: 1.15,
-    },
-  ],
 };
 
 const h4: Font = {
-  family: defaultFontFamily.secondary,
+  family: defaultFontFamily.primary,
   weight: defaultFontWeight.bold,
-  size: 1.125,
+  size: 2.125,
   lineHeight: 1.15,
-  mediaQueries: [
-    {
-      query: defaultMediaQueries.small,
-      weight: defaultFontWeight.bold,
-      size: 1.25,
-      lineHeight: 1.15,
-    },
-  ],
 };
 
 const h5: Font = {
-  family: defaultFontFamily.secondary,
+  family: defaultFontFamily.primary,
   weight: defaultFontWeight.regular,
-  size: 1.125,
+  size: 1.375,
   lineHeight: 1.15,
-  mediaQueries: [
-    {
-      query: defaultMediaQueries.small,
-      weight: defaultFontWeight.regular,
-      size: 1.25,
-      lineHeight: 1.15,
-    },
-  ],
 };
 
 const h6: Font = {
-  family: defaultFontFamily.secondary,
+  family: defaultFontFamily.primary,
   weight: defaultFontWeight.bold,
   size: 1,
   lineHeight: 1.15,
-  mediaQueries: [
-    {
-      query: defaultMediaQueries.small,
-      weight: defaultFontWeight.bold,
-      size: 1,
-      lineHeight: 1.15,
-    },
-  ],
 };
 
 const b1: Font = {
-  family: defaultFontFamily.secondary,
+  family: defaultFontFamily.primary,
   weight: defaultFontWeight.regular,
   size: 1,
   lineHeight: 1.5,
-  mediaQueries: [
-    {
-      query: defaultMediaQueries.small,
-      weight: defaultFontWeight.regular,
-      size: 1,
-      lineHeight: 1.5,
-    },
-  ],
 };
 
 const b2: Font = {
-  family: defaultFontFamily.secondary,
+  family: defaultFontFamily.primary,
   weight: defaultFontWeight.bold,
   size: 1.125,
   lineHeight: 1.15,
-  mediaQueries: [
-    {
-      query: defaultMediaQueries.small,
-      weight: defaultFontWeight.bold,
-      size: 1.125,
-      lineHeight: 1.15,
-    },
-  ],
 };
 
 const b3: Font = {
-  family: defaultFontFamily.secondary,
+  family: defaultFontFamily.primary,
   weight: defaultFontWeight.bold,
   size: 1.125,
   lineHeight: 1.15,
-  mediaQueries: [
-    {
-      query: defaultMediaQueries.small,
-      weight: defaultFontWeight.bold,
-      size: 1.25,
-      lineHeight: 1.15,
-    },
-  ],
 };
 
 export const defaultFonts: IFonts = {

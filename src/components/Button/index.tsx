@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components';
 import createFontStyles from '../../util/createFontStyles';
 import createMediaQuery from '../../util/createMediaQuery';
-import setColorOpacity from '../../util/setColorOpacity';
 
 type Size = 'small' | 'medium' | 'large';
-type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
+type Variant = 'primary' | 'secondary';
 
 interface ButtonProps {
   size: Size;
@@ -105,40 +104,6 @@ const Button = styled.button<ButtonProps>`
         svg {
           fill: ${props => props.theme.colors.onSecondary};
         }
-      }
-    `};
-  ${props =>
-    props.variant === 'tertiary' &&
-    css`
-      background-color: ${props => props.theme.colors.background};
-      color: ${props => props.theme.colors.onBackground};
-      border: none;
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: ${props => setColorOpacity(props.theme.colors.background, '0.8')};
-      }
-      svg {
-        fill: ${props => props.theme.colors.onBackground};
-      }
-    `};
-  ${props =>
-    props.variant === 'quaternary' &&
-    css`
-      background-color: transparent;
-      color: ${props => props.theme.colors.onPrimary};
-      border-color: ${props => props.theme.colors.onPrimary};
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: ${props => props.theme.colors.onPrimary};
-        color: ${props => props.theme.colors.onBackground};
-        svg {
-          fill: ${props => props.theme.colors.onBackground};
-        }
-      }
-      svg {
-        fill: ${props => props.theme.colors.onPrimary};
       }
     `};
 `;

@@ -40,8 +40,7 @@ export const StyledLabelText = styled.span`
 export const StyledInput = styled.input<InputFieldProps>`
   height: 40px;
   width: 60%;
-  background-color: ${props => props.theme.colors.background};
-  border: 1px solid ${props => props.theme.colors.primaryVariant};
+  border: 1px solid ${props => props.theme.colors.secondary};
   border-left: none;
   border-bottom: 2px solid ${props => props.theme.colors.primary};
   padding: 0 32px;
@@ -71,7 +70,8 @@ export const StyledInput = styled.input<InputFieldProps>`
   ${props =>
     props.hasValue &&
     css`
-      border-color: ${props.theme.colors.primaryVariant};
+      border-color: ${props => props.theme.colors.primaryVariant};
+      color: ${props => props.theme.colors.primaryVariant};
     `};
   ${props =>
     props.textarea &&

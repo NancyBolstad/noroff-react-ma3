@@ -62,3 +62,8 @@ export const StyledInput = styled.input`
     border: 1px solid ${props => props.theme.colors.primaryVariant};
   }
 `;
+
+export const ErrorMessage = styled.span`
+  text-transform: capitalize;
+  ${props => createFontStyles(props.theme.fonts.b2)};
+`;
