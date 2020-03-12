@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import createFontStyles from '../../util/createFontStyles';
-import createMediaQuery from '../../util/createMediaQuery';
 
 type Size = 'small' | 'medium' | 'large';
 type Variant = 'primary' | 'secondary';
@@ -36,12 +35,10 @@ const Button = styled.button<ButtonProps>`
       min-width: 75px;
       padding: 0 32px;
       ${createFontStyles(props.theme.fonts.b2)};
-      ${createMediaQuery(
-        'small',
-        css`
-          padding: 0 20px;
-        `,
-      )}
+
+      @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
+        padding: 0 20px;
+      }
     `};
   ${props =>
     props.size === 'medium' &&
@@ -50,12 +47,10 @@ const Button = styled.button<ButtonProps>`
       width: 100%;
       padding: 0 20px;
       ${createFontStyles(props.theme.fonts.b2)};
-      ${createMediaQuery(
-        'small',
-        css`
-          width: 160px;
-        `,
-      )}
+
+      @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
+        width: 160px;
+      }
     `};
   ${props =>
     props.size === 'large' &&
@@ -66,12 +61,10 @@ const Button = styled.button<ButtonProps>`
       padding-right: 75px;
       border-radius: 35px;
       ${createFontStyles(props.theme.fonts.b3)};
-      ${createMediaQuery(
-        'small',
-        css`
-          height: 50px;
-        `,
-      )}
+
+      @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
+        height: 50px;
+      }
     `};
   ${props =>
     props.variant === 'primary' &&
@@ -109,7 +102,6 @@ const Button = styled.button<ButtonProps>`
 `;
 
 const ButtonExternal = Button.withComponent('a');
-const ButtonInput = Button.withComponent('input');
 
 export default Button;
-export { ButtonExternal, ButtonInput };
+export { ButtonExternal };

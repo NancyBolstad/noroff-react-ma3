@@ -1,6 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import createFontStyles from '../../util/createFontStyles';
-import createMediaQuery from '../../util/createMediaQuery';
 
 export const Form = styled.form`
   max-width: 380px;
@@ -41,12 +40,11 @@ export const StyledInput = styled.input`
   outline: none;
   transition: border-color 0.1s ease-in-out;
   ${props => createFontStyles(props.theme.fonts.b1)};
-  ${createMediaQuery(
-    'small',
-    css`
-      min-width: 150px;
-    `,
-  )};
+
+  @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
+    min-width: 150px;
+  }
+
   &::placeholder {
     color: ${props => props.theme.colors.primaryVariant};
   }
