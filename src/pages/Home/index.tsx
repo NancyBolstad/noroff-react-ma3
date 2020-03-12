@@ -1,9 +1,9 @@
 import * as React from 'react';
-import ThemeWrapper from '../components/ThemeWrapper';
-import Heading from '../components/Heading';
-import HomeContent from '../components/HomeContent';
-import NewsList from '../components/NewsList';
-import Input from '../components/Input';
+import ThemeWrapper from '../../components/ThemeWrapper';
+import Heading from '../../components/Heading';
+import HomeContent from '../../components/HomeContent';
+import NewsList from '../../components/NewsList';
+import Input from '../../components/Input';
 
 interface Props {}
 

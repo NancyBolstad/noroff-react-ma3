@@ -1,13 +1,9 @@
 import React from 'react';
 import './App.css';
-import Home from './pages/Home';
-
-const homePage = {
-  headingContent: 'Welcome to Home Page',
-};
+import Layout from './pages/Layout';
 
 function App() {
-  return <Home {...homePage} />;
+  return <Layout />;
 }
 
 export default App;
