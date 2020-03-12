@@ -12,6 +12,7 @@ const Element = styled.h1<{ isPrimaryColor?: boolean }>`
   color: ${props =>
     props.isPrimaryColor ? props.theme.colors.primary : props.theme.colors.secondary};
   ${props => createFontStyles(props.theme.fonts.h1)};
+  text-align: center;
 
   @media all and (min-width: 600px) {
     margin: ${props => props.theme.spacing.l}rem 0;
