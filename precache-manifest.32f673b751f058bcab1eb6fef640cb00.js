@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dd613b48d2487fcc5e54faabc0a5b9a4",
+    "revision": "18393c83c5780ccea6e5fb124c9d8c5e",
     "url": "/noroff-react-ma3/index.html"
   },
   {
