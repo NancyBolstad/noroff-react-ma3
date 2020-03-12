@@ -1,8 +1,9 @@
 {
-  "name": "react-theme",
+  "name": "noroff-react-ma3",
   "version": "0.1.0",
   "private": true,
-  "repository": "git@github.com/NancyBolstad/react-theme.git",
+  "repository": "git@github.com/NancyBolstad/noroff-react-ma3.git",
+  "homepage": "http://gitname.github.io/noroff-react-ma3",
   "author": "Nancy Bolstad <litchacha@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -15,6 +16,7 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-router-dom": "^5.1.3",
     "@types/yup": "^0.26.32",
+    "gh-pages": "^2.2.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-hook-form": "^5.0.3",
@@ -30,7 +32,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "ts-dev": "tsc --watch --incremental"
+    "ts-dev": "tsc --watch --incremental",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
