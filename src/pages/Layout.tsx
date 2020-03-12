@@ -13,7 +13,7 @@ const Header = styled.header`
 const Nav = styled.nav`
   ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     list-style-type: none;
   }
