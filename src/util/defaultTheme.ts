@@ -10,17 +10,17 @@ import {
 } from '../types/theme';
 
 const defaultColors: IColors = {
-  primary: '#2B2928',
-  primaryVariant: '#555453',
-  secondary: '#108482',
-  secondaryVariant: '#49A2A0',
-  background: '#ffffff',
-  surface: '#F8F8F9',
+  primary: '#000000',
+  primaryVariant: '#F8F8F9',
+  secondary: '#ef3b7d',
+  secondaryVariant: '#ec5990',
+  background: '#191d3a',
+  surface: '#516391',
   error: '#D6170C',
-  onPrimary: '#ffffff',
-  onSecondary: '#ffffff',
-  onBackground: '#2B2928',
-  onSurface: '#2B2928',
+  onPrimary: '#000000',
+  onSecondary: '#000000',
+  onBackground: '#ffffff',
+  onSurface: '#ffffff',
   onError: '#ffffff',
 };
 
