@@ -8,7 +8,7 @@ interface Props {}
 
 const schema = yup.object().shape({
   userName: yup.string().required(),
-  password: yup.string().required(),
+  password: yup.string().min(4, 'At least four characters'),
 });
 
 const LoginForm: React.FC<Props> = () => {
