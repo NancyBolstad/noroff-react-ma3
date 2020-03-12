@@ -1,20 +1,13 @@
 import * as React from 'react';
-import styled from 'styled-components';
 import { storiesOf } from '@storybook/react';
 import HomeContent from './';
 import Heading from '../Heading';
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
+const mockHeadingA = <Heading content="Neque porro quisquam dolorem" isPrimaryColor />;
+const mockHeadingB = <Heading content="Neque porro quisquam dolorem" />;
 
-const mockHeading = <Heading content="Neque porro quisquam dolorem" isPrimaryColor />;
+const mockChildren = [mockHeadingA, mockHeadingB, mockHeadingA, mockHeadingB];
 
 storiesOf('Component/HomeContent', module).add('Default', () => (
-  <Wrapper>
-    <HomeContent>{mockHeading}</HomeContent>
-  </Wrapper>
+  <HomeContent children={mockChildren} />
 ));
