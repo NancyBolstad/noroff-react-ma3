@@ -10,15 +10,9 @@ const Wrapper = styled.div`
 `;
 
 const mockContent: string = 'Neque porro quisquam dolorem';
+const HeadingPrimaryStory = <Heading content={mockContent} isPrimaryColor />;
+const HeadingSecondaryStory = <Heading content={mockContent} />;
 
 storiesOf('Component/Heading', module)
-  .add('Default', () => (
-    <Wrapper>
-      <Heading content={mockContent} isPrimaryColor />
-    </Wrapper>
-  ))
-  .add('Variant', () => (
-    <Wrapper>
-      <Heading content={mockContent} />
-    </Wrapper>
-  ));
+  .add('Default', () => <Wrapper>{HeadingPrimaryStory}</Wrapper>)
+  .add('Variant', () => <Wrapper>{HeadingSecondaryStory}</Wrapper>);

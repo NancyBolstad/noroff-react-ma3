@@ -23,6 +23,7 @@ const LoginForm: React.FC<Props> = () => {
     }
   };
 
+  //@ts-ignore
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       {/* register your input into the hook by invoking the "register" function */}
@@ -30,14 +31,16 @@ const LoginForm: React.FC<Props> = () => {
         <StyledLabelText>Username</StyledLabelText>
         <StyledInput type="text" name="userName" placeholder="Your username" ref={register} />
       </Label>
-      //@ts-ignore
-      {errors.userName && <span>{errors.userName.message}</span>}
+      {/* 
+      // @ts-ignore */
+      errors.userName && <span>{errors.userName.message}</span>}
       <Label>
         <StyledLabelText>Password</StyledLabelText>
         <StyledInput type="text" name="password" placeholder="Your password" ref={register} />
       </Label>
-      //@ts-ignore
-      {errors.password && <span>{errors.password.message}</span>}
+      {/* 
+      // @ts-ignore */
+      errors.password && <span>{errors.password.message}</span>}
       <Button size="medium" variant="primary" type="submit">
         Login
       </Button>

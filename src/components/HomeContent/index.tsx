@@ -9,19 +9,11 @@ const Wrapper = styled.div`
   margin: 0 auto;
 `;
 
-interface Props {
-  children: React.ReactNode[];
-}
+interface Props {}
 
 export const HomeContent: React.FunctionComponent<Props> = ({ children }) => {
   if (!children) return null;
-  return (
-    <Wrapper>
-      {(children || []).map((child, index) => {
-        return <div key={index}>{child}</div>;
-      })}
-    </Wrapper>
-  );
+  return <Wrapper>{children}</Wrapper>;
 };
 
 export default HomeContent;

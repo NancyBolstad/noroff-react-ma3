@@ -5,7 +5,7 @@ import { defaultTheme } from '../../util/defaultTheme';
 
 export interface Props {}
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
