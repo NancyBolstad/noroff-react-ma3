@@ -144,6 +144,7 @@ const Button = styled.button<ButtonProps>`
 `;
 
 const ButtonExternal = Button.withComponent('a');
+const ButtonInput = Button.withComponent('input');
 
 export default Button;
-export { ButtonExternal };
+export { ButtonExternal, ButtonInput };
