@@ -62,3 +62,8 @@ export const StyledInput = styled.input`
     border: 1px solid ${props => props.theme.colors.primaryVariant};
   }
 `;
+
+export const Loader = styled.span`
+  ${props => createFontStyles(props.theme.fonts.b1)};
+  color: ${props => props.theme.colors.secondaryVariant};
+`;

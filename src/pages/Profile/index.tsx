@@ -1,18 +1,20 @@
 import * as React from 'react';
 import ThemeWrapper from '../../components/ThemeWrapper';
+import Heading from '../../components/Heading';
 import HomeContent from '../../components/HomeContent';
-import LoginForm from '../../components/LoginForm';
+import NewsList from '../../components/NewsList';
 
 interface Props {}
 
-export const Login: React.FunctionComponent<Props> = () => {
+export const Profile: React.FunctionComponent<Props> = () => {
   return (
     <ThemeWrapper>
+      <Heading content="Welcome back!" isPrimaryColor />
       <HomeContent>
-        <LoginForm />
+        <NewsList />
       </HomeContent>
     </ThemeWrapper>
   );
 };
 
-export default Login;
+export default Profile;

@@ -4,6 +4,7 @@ import Home from './Home';
 import Login from './Login';
 import News from './News';
 import Header from '../components/Header';
+import Profile from '../pages/Profile';
 
 interface Props {}
 
@@ -13,6 +14,9 @@ const Layout: React.FunctionComponent<Props> = () => {
       <div>
         <Header />
         <Switch>
+          <Route path="/profile">
+            <Profile />
+          </Route>
           <Route path="/login">
             <Login />
           </Route>
