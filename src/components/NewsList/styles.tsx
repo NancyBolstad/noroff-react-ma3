@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import createMediaQuery from '../../util/createMediaQuery';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -14,6 +15,14 @@ export const ListFlexParent = styled.ul`
   padding: ${props => props.theme.spacing.m}rem ${props => props.theme.spacing.xl}rem;
   display: flex;
   flex-direction: column;
+  ${createMediaQuery(
+    'small',
+    css`
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: start;
+    `,
+  )}
 `;
 
 export const ItemFlexChild = styled.li`

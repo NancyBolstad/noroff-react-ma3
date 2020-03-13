@@ -12,6 +12,14 @@ const Wrapper = styled.div`
   }
 `;
 
+const WrapperDark = styled.div`
+  padding: 1rem;
+  background-color: #000;
+  > * {
+    margin: 1rem 0;
+  }
+`;
+
 storiesOf('Component/Button', module)
   .add('Primary', () => (
     <Wrapper>
@@ -39,6 +47,32 @@ storiesOf('Component/Button', module)
       </Button>
     </Wrapper>
   ))
+  .add('Tertiary', () => (
+    <WrapperDark>
+      <Button size="large" variant="tertiary">
+        Large {search}
+      </Button>
+      <Button size="medium" variant="tertiary">
+        Medium {hamburger}
+      </Button>
+      <Button size="small" variant="tertiary">
+        Small {search}
+      </Button>
+    </WrapperDark>
+  ))
+  .add('Quaternary', () => (
+    <WrapperDark>
+      <Button size="large" variant="quaternary">
+        Large {search}
+      </Button>
+      <Button size="medium" variant="quaternary">
+        Medium {hamburger}
+      </Button>
+      <Button size="small" variant="quaternary">
+        Small {search}
+      </Button>
+    </WrapperDark>
+  ))
   .add('As anchor', () => (
     <>
       <Wrapper>
@@ -49,5 +83,10 @@ storiesOf('Component/Button', module)
           Small {search}
         </ButtonExternal>
       </Wrapper>
+      <WrapperDark>
+        <ButtonExternal href="#test" size="medium" variant="tertiary">
+          Medium {hamburger}
+        </ButtonExternal>
+      </WrapperDark>
     </>
   ));

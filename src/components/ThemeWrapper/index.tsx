@@ -1,18 +1,17 @@
 import * as React from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import createFontStyles from '../../util/createFontStyles';
 import { defaultTheme } from '../../util/defaultTheme';
 
 export interface Props {}
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Anton|Roboto&display=swap');  
-
   body {
     margin: 0;
     padding: 0;
     -webkit-font-smoothing: antialiased;
     color: ${props => props.theme.colors.onBackground};
-    background-color:${props => props.theme.colors.background};
+    ${props => createFontStyles(props.theme.fonts.b1)}
   }
   * {
     box-sizing: border-box;
