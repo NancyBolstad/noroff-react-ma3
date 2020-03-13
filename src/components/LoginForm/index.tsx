@@ -45,7 +45,6 @@ const LoginForm: React.FC<Props> = () => {
           Login
         </Button>
       </Form>
-      )}
     </>
   );
 };
