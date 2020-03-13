@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/noroff-react-ma3static/css/main.5facb584.chunk.css",
-    "main.js": "/noroff-react-ma3static/js/main.d155cbc1.chunk.js",
-    "main.js.map": "/noroff-react-ma3static/js/main.d155cbc1.chunk.js.map",
-    "runtime-main.js": "/noroff-react-ma3static/js/runtime-main.cc27fe34.js",
-    "runtime-main.js.map": "/noroff-react-ma3static/js/runtime-main.cc27fe34.js.map",
-    "static/js/2.c878fe24.chunk.js": "/noroff-react-ma3static/js/2.c878fe24.chunk.js",
-    "static/js/2.c878fe24.chunk.js.map": "/noroff-react-ma3static/js/2.c878fe24.chunk.js.map",
-    "index.html": "/noroff-react-ma3index.html",
-    "precache-manifest.8d4d0abd02f264f5e6331f21a59b1af3.js": "/noroff-react-ma3precache-manifest.8d4d0abd02f264f5e6331f21a59b1af3.js",
-    "service-worker.js": "/noroff-react-ma3service-worker.js",
-    "static/css/main.5facb584.chunk.css.map": "/noroff-react-ma3static/css/main.5facb584.chunk.css.map",
-    "static/js/2.c878fe24.chunk.js.LICENSE.txt": "/noroff-react-ma3static/js/2.c878fe24.chunk.js.LICENSE.txt"
+    "main.css": "/noroff-react-ma3/static/css/main.5facb584.chunk.css",
+    "main.js": "/noroff-react-ma3/static/js/main.747cc1b7.chunk.js",
+    "main.js.map": "/noroff-react-ma3/static/js/main.747cc1b7.chunk.js.map",
+    "runtime-main.js": "/noroff-react-ma3/static/js/runtime-main.7382423a.js",
+    "runtime-main.js.map": "/noroff-react-ma3/static/js/runtime-main.7382423a.js.map",
+    "static/js/2.b33fe708.chunk.js": "/noroff-react-ma3/static/js/2.b33fe708.chunk.js",
+    "static/js/2.b33fe708.chunk.js.map": "/noroff-react-ma3/static/js/2.b33fe708.chunk.js.map",
+    "index.html": "/noroff-react-ma3/index.html",
+    "precache-manifest.8b0c485eb8b47d9ac93ec4c03261a214.js": "/noroff-react-ma3/precache-manifest.8b0c485eb8b47d9ac93ec4c03261a214.js",
+    "service-worker.js": "/noroff-react-ma3/service-worker.js",
+    "static/css/main.5facb584.chunk.css.map": "/noroff-react-ma3/static/css/main.5facb584.chunk.css.map",
+    "static/js/2.b33fe708.chunk.js.LICENSE.txt": "/noroff-react-ma3/static/js/2.b33fe708.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cc27fe34.js",
-    "static/js/2.c878fe24.chunk.js",
+    "static/js/runtime-main.7382423a.js",
+    "static/js/2.b33fe708.chunk.js",
     "static/css/main.5facb584.chunk.css",
-    "static/js/main.d155cbc1.chunk.js"
+    "static/js/main.747cc1b7.chunk.js"
   ]
 }
