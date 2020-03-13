@@ -9,7 +9,7 @@ interface Props {}
 export const Home: React.FunctionComponent<Props> = () => {
   return (
     <ThemeWrapper>
-      <Heading content="Home Page" isPrimaryColor />
+      <Heading content="Noroff React App Module Assignment 3" isPrimaryColor />
       <HomeContent>
         <NewsList />
         <NewsList />

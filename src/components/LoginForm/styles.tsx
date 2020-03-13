@@ -1,13 +1,18 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import createFontStyles from '../../util/createFontStyles';
-import createMediaQuery from '../../util/createMediaQuery';
 
 export const Form = styled.form`
-  max-width: 380px;
+  max-width: 480px;
   margin: 0 auto;
   padding: ${props => props.theme.spacing.s}rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    margin-top: ${props => props.theme.spacing.s}rem;
+  }
 `;
 
 export const Label = styled.label`
@@ -15,7 +20,7 @@ export const Label = styled.label`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: ${props => props.theme.spacing.s}rem;
+  margin: ${props => props.theme.spacing.s}rem 0;
 `;
 
 export const StyledLabelText = styled.span`
@@ -41,12 +46,7 @@ export const StyledInput = styled.input`
   outline: none;
   transition: border-color 0.1s ease-in-out;
   ${props => createFontStyles(props.theme.fonts.b1)};
-  ${createMediaQuery(
-    'small',
-    css`
-      min-width: 150px;
-    `,
-  )};
+
   &::placeholder {
     color: ${props => props.theme.colors.primaryVariant};
   }
@@ -61,9 +61,12 @@ export const StyledInput = styled.input`
   &:placeholder-shown {
     border: 1px solid ${props => props.theme.colors.primaryVariant};
   }
+
+  @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
+    min-width: 150px;
+  }
 `;
 
-export const Loader = styled.span`
-  ${props => createFontStyles(props.theme.fonts.b1)};
-  color: ${props => props.theme.colors.secondaryVariant};
+export const ErrorMessage = styled.span`
+  ${props => createFontStyles(props.theme.fonts.b2)};
 `;

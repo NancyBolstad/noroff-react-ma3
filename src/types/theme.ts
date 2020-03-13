@@ -1,19 +1,3 @@
-export interface FontMediaQuery {
-  query: number;
-  family?: string;
-  weight?: number;
-  size?: number;
-  lineHeight?: number;
-}
-
-export interface Font {
-  family: string;
-  weight: number;
-  size: number;
-  lineHeight?: number;
-  mediaQueries?: FontMediaQuery[];
-}
-
 export interface IMediaQueries {
   small: number;
   medium: number;
@@ -26,6 +10,13 @@ export interface ISpacing {
   m: number;
   l: number;
   xl: number;
+}
+
+export interface Font {
+  family: string;
+  weight: number;
+  size: number;
+  lineHeight?: number;
 }
 
 export interface IFonts {
@@ -42,7 +33,7 @@ export interface IFonts {
 
 export interface IFontFamily {
   primary: string;
-  secondary: string;
+  secondary?: string;
 }
 
 export interface IFontWeight {

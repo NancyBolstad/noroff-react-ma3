@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
-import { Form, StyledInput, Label, StyledLabelText } from './styles';
+import { Form, StyledInput, Label, StyledLabelText, ErrorMessage } from './styles';
 import Button from '../Button';
 import Heading from '../Heading';
 import LoginSchema from '../../util/schema';
@@ -33,14 +33,14 @@ const LoginForm: React.FC<Props> = () => {
         </Label>
         {/* 
       // @ts-ignore */
-        errors.userName && <span>{errors.userName.message}</span>}
+        errors.userName && <ErrorMessage>{errors.userName.message}</ErrorMessage>}
         <Label>
           <StyledLabelText>Password</StyledLabelText>
-          <StyledInput type="text" name="password" placeholder="Your password" ref={register} />
+          <StyledInput type="password" name="password" placeholder="Your password" ref={register} />
         </Label>
         {/* 
       // @ts-ignore */
-        errors.password && <span>{`🔥${errors.password.message}`}</span>}
+        errors.password && <ErrorMessage>{errors.password.message}</ErrorMessage>}
         <Button size="medium" variant="primary" type="submit">
           Login
         </Button>
