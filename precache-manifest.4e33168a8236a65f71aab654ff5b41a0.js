@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "381df2842857491aceb376cd0249ef7f",
+    "revision": "150b0648ff24524aab6f60c82aa994fc",
     "url": "/noroff-react-ma3/index.html"
   },
   {
-    "revision": "8a100a717a04669d59ad",
+    "revision": "5f6d0718b0de4a9d74b3",
     "url": "/noroff-react-ma3/static/css/main.5facb584.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/noroff-react-ma3/static/js/2.3e983f1f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8a100a717a04669d59ad",
-    "url": "/noroff-react-ma3/static/js/main.85ef302d.chunk.js"
+    "revision": "5f6d0718b0de4a9d74b3",
+    "url": "/noroff-react-ma3/static/js/main.16b5e0a7.chunk.js"
   },
   {
     "revision": "add0e389514841524ed6",
