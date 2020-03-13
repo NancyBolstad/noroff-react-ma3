@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b1ecb33ddd09d98703031c4d181b760e",
+    "revision": "d4ca2ab08886c3caa77f3cf367b6bf5c",
     "url": "/noroff-react-ma3/index.html"
   },
   {
-    "revision": "9e6a89d3ba9c5d2502ce",
+    "revision": "ab4b591fff89523c6f50",
     "url": "/noroff-react-ma3/static/css/main.5facb584.chunk.css"
   },
   {
-    "revision": "aca391a515031a9387b0",
-    "url": "/noroff-react-ma3/static/js/2.3e983f1f.chunk.js"
+    "revision": "8f0d4d99eda601b1fccd",
+    "url": "/noroff-react-ma3/static/js/2.247889f8.chunk.js"
   },
   {
     "revision": "e2eae84c7a1d31e04c786e0eb21cdeb1",
-    "url": "/noroff-react-ma3/static/js/2.3e983f1f.chunk.js.LICENSE.txt"
+    "url": "/noroff-react-ma3/static/js/2.247889f8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9e6a89d3ba9c5d2502ce",
-    "url": "/noroff-react-ma3/static/js/main.7fed7a32.chunk.js"
+    "revision": "ab4b591fff89523c6f50",
+    "url": "/noroff-react-ma3/static/js/main.cd789fbd.chunk.js"
   },
   {
     "revision": "add0e389514841524ed6",
