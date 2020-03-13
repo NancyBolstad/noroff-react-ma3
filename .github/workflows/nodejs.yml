@@ -33,5 +33,3 @@ jobs:
           CI: true
       - name: Deploy
         run: npm run deploy
-        env:
-          CI: true
