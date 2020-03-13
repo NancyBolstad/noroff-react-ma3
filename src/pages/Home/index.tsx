@@ -3,6 +3,8 @@ import ThemeWrapper from '../../components/ThemeWrapper';
 import Heading from '../../components/Heading';
 import HomeContent from '../../components/HomeContent';
 import NewsList from '../../components/NewsList';
+import ImageGrid from '../../components/ImageGrid';
+import { mockImage } from '../../components/ImageGrid/story';
 
 interface Props {}
 
@@ -11,8 +13,7 @@ export const Home: React.FunctionComponent<Props> = () => {
     <ThemeWrapper>
       <Heading content="Noroff React App Module Assignment 3" isPrimaryColor />
       <HomeContent>
-        <NewsList />
-        <NewsList />
+        <ImageGrid images={[mockImage, mockImage, mockImage]} />
         <NewsList />
       </HomeContent>
     </ThemeWrapper>
