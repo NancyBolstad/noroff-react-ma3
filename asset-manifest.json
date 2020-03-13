@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/noroff-react-ma3/static/css/main.5facb584.chunk.css",
-    "main.js": "/noroff-react-ma3/static/js/main.1a00dc20.chunk.js",
-    "main.js.map": "/noroff-react-ma3/static/js/main.1a00dc20.chunk.js.map",
+    "main.js": "/noroff-react-ma3/static/js/main.9bc2f07b.chunk.js",
+    "main.js.map": "/noroff-react-ma3/static/js/main.9bc2f07b.chunk.js.map",
     "runtime-main.js": "/noroff-react-ma3/static/js/runtime-main.7382423a.js",
     "runtime-main.js.map": "/noroff-react-ma3/static/js/runtime-main.7382423a.js.map",
-    "static/js/2.3e983f1f.chunk.js": "/noroff-react-ma3/static/js/2.3e983f1f.chunk.js",
-    "static/js/2.3e983f1f.chunk.js.map": "/noroff-react-ma3/static/js/2.3e983f1f.chunk.js.map",
+    "static/js/2.53c09236.chunk.js": "/noroff-react-ma3/static/js/2.53c09236.chunk.js",
+    "static/js/2.53c09236.chunk.js.map": "/noroff-react-ma3/static/js/2.53c09236.chunk.js.map",
     "index.html": "/noroff-react-ma3/index.html",
-    "precache-manifest.a5ede2ddf0ec7c316a47f6e0efeb0106.js": "/noroff-react-ma3/precache-manifest.a5ede2ddf0ec7c316a47f6e0efeb0106.js",
+    "precache-manifest.b57c423d3e624fb92d23377f0d376a88.js": "/noroff-react-ma3/precache-manifest.b57c423d3e624fb92d23377f0d376a88.js",
     "service-worker.js": "/noroff-react-ma3/service-worker.js",
     "static/css/main.5facb584.chunk.css.map": "/noroff-react-ma3/static/css/main.5facb584.chunk.css.map",
-    "static/js/2.3e983f1f.chunk.js.LICENSE.txt": "/noroff-react-ma3/static/js/2.3e983f1f.chunk.js.LICENSE.txt"
+    "static/js/2.53c09236.chunk.js.LICENSE.txt": "/noroff-react-ma3/static/js/2.53c09236.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7382423a.js",
-    "static/js/2.3e983f1f.chunk.js",
+    "static/js/2.53c09236.chunk.js",
     "static/css/main.5facb584.chunk.css",
-    "static/js/main.1a00dc20.chunk.js"
+    "static/js/main.9bc2f07b.chunk.js"
   ]
 }
