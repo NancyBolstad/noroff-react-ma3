@@ -1,25 +1,31 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
-import { Wrapper, Nav } from './styles';
+import { Link, useLocation } from 'react-router-dom';
+import { Wrapper, MenuLeft, MenuRight, NavLinkList } from './styles';
 import ThemeWrapper from '../ThemeWrapper';
 
 const Header: React.FC = () => {
+  let location = useLocation();
   return (
     <ThemeWrapper>
       <Wrapper>
-        <Nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/news">News List</Link>
-            </li>
-          </ul>
-        </Nav>
+        <nav>
+          <a href="/news">Noroff React App</a>
+          <NavLinkList>
+            <MenuLeft>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/news">News List</Link>
+              </li>
+            </MenuLeft>
+            <MenuRight>
+              <li>
+                <Link to="/login">{location.pathname === '/profile' ? 'Log Out' : 'Login'}</Link>
+              </li>
+            </MenuRight>
+          </NavLinkList>
+        </nav>
       </Wrapper>
     </ThemeWrapper>
   );

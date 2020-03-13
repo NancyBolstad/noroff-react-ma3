@@ -3,26 +3,35 @@ import styled from 'styled-components';
 export const Wrapper = styled.header`
   width: 100%;
   height: 78px;
+  background: ${props => props.theme.colors.secondaryVariant};
+  color: ${props => props.theme.colors.onSecondary};
 `;
 
-export const Nav = styled.nav`
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    padding-top: 1.5rem;
-  }
+export const NavLinkList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding-top: 1.5rem;
+
   a {
-    color: ${props => props.theme.colors.secondaryVariant};
+    color: ${props => props.theme.colors.onSecondary};
     font-size: 1.75rem;
     font-weight: bold;
-    margin-right: 1.8rem;
+    margin-right: ${props => props.theme.spacing.s}rem;
     text-decoration: none;
-    border-bottom: 2px solid ${props => props.theme.colors.secondaryVariant};
     padding: 0.5rem 2rem;
-  }
-  a:hover {
-    opacity: 0.8;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 `;
+
+export const MenuLeft = styled.div`
+  flex: 1;
+  display: flex;
+`;
+
+export const MenuRight = styled.div``;
