@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Wrapper, MenuLeft, MenuRight, NavLinkList } from './styles';
+import { useLocation } from 'react-router-dom';
+import { Wrapper, Nav, MenuLeft, MenuRight, NavLinkList, NavLink, LoginButton } from './styles';
 import ThemeWrapper from '../ThemeWrapper';
 
 const Header: React.FC = () => {
@@ -8,24 +8,28 @@ const Header: React.FC = () => {
   return (
     <ThemeWrapper>
       <Wrapper>
-        <nav>
-          <a href="/news">Noroff React App</a>
+        <Nav>
           <NavLinkList>
             <MenuLeft>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink to="/">L-o-G-o</NavLink>
               </li>
               <li>
-                <Link to="/news">News List</Link>
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/news">News List</NavLink>
               </li>
             </MenuLeft>
-            <MenuRight>
-              <li>
-                <Link to="/login">{location.pathname === '/profile' ? 'Log Out' : 'Login'}</Link>
-              </li>
-            </MenuRight>
           </NavLinkList>
-        </nav>
+          <MenuRight>
+            <li>
+              <LoginButton to="/login">
+                {location.pathname === '/profile' ? 'Log Out' : 'Login'}
+              </LoginButton>
+            </li>
+          </MenuRight>
+        </Nav>
       </Wrapper>
     </ThemeWrapper>
   );
