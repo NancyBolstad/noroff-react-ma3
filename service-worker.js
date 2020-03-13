@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/noroff-react-ma3/precache-manifest.d33aa3480d4f6284180ce71d0e0c5b0e.js"
+  "/noroff-react-ma3/precache-manifest.0370ea1b298bff2b89fddc613e4cca00.js"
 );
 
 self.addEventListener('message', (event) => {
