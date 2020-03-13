@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components';
 import createFontStyles from '../../util/createFontStyles';
+import createMediaQuery from '../../util/createMediaQuery';
+import setColorOpacity from '../../util/setColorOpacity';
 
 type Size = 'small' | 'medium' | 'large';
-type Variant = 'primary' | 'secondary';
+type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
 
 interface ButtonProps {
   size: Size;
@@ -35,10 +37,12 @@ const Button = styled.button<ButtonProps>`
       min-width: 75px;
       padding: 0 32px;
       ${createFontStyles(props.theme.fonts.b2)};
-
-      @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
-        padding: 0 20px;
-      }
+      ${createMediaQuery(
+        'small',
+        css`
+          padding: 0 20px;
+        `,
+      )}
     `};
   ${props =>
     props.size === 'medium' &&
@@ -47,10 +51,12 @@ const Button = styled.button<ButtonProps>`
       width: 100%;
       padding: 0 20px;
       ${createFontStyles(props.theme.fonts.b2)};
-
-      @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
-        width: 160px;
-      }
+      ${createMediaQuery(
+        'small',
+        css`
+          width: 160px;
+        `,
+      )}
     `};
   ${props =>
     props.size === 'large' &&
@@ -61,10 +67,12 @@ const Button = styled.button<ButtonProps>`
       padding-right: 75px;
       border-radius: 35px;
       ${createFontStyles(props.theme.fonts.b3)};
-
-      @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
-        height: 50px;
-      }
+      ${createMediaQuery(
+        'small',
+        css`
+          height: 50px;
+        `,
+      )}
     `};
   ${props =>
     props.variant === 'primary' &&
@@ -99,9 +107,44 @@ const Button = styled.button<ButtonProps>`
         }
       }
     `};
+  ${props =>
+    props.variant === 'tertiary' &&
+    css`
+      background-color: ${props => props.theme.colors.background};
+      color: ${props => props.theme.colors.onBackground};
+      border: none;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: ${props => setColorOpacity(props.theme.colors.background, '0.8')};
+      }
+      svg {
+        fill: ${props => props.theme.colors.onBackground};
+      }
+    `};
+  ${props =>
+    props.variant === 'quaternary' &&
+    css`
+      background-color: transparent;
+      color: ${props => props.theme.colors.onPrimary};
+      border-color: ${props => props.theme.colors.onPrimary};
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: ${props => props.theme.colors.onPrimary};
+        color: ${props => props.theme.colors.onBackground};
+        svg {
+          fill: ${props => props.theme.colors.onBackground};
+        }
+      }
+      svg {
+        fill: ${props => props.theme.colors.onPrimary};
+      }
+    `};
 `;
 
 const ButtonExternal = Button.withComponent('a');
+const ButtonInput = Button.withComponent('input');
 
 export default Button;
-export { ButtonExternal };
+export { ButtonExternal, ButtonInput };

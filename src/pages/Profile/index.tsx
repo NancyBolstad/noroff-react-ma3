@@ -6,17 +6,15 @@ import NewsList from '../../components/NewsList';
 
 interface Props {}
 
-export const Home: React.FunctionComponent<Props> = () => {
+export const Profile: React.FunctionComponent<Props> = () => {
   return (
     <ThemeWrapper>
-      <Heading content="Home Page" isPrimaryColor />
+      <Heading content="Welcome back!" isPrimaryColor />
       <HomeContent>
-        <NewsList />
-        <NewsList />
         <NewsList />
       </HomeContent>
     </ThemeWrapper>
   );
 };
 
-export default Home;
+export default Profile;

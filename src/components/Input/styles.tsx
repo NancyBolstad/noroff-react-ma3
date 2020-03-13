@@ -2,12 +2,19 @@ import styled, { css } from 'styled-components';
 import createFontStyles from '../../util/createFontStyles';
 import createMediaQuery from '../../util/createMediaQuery';
 
-export const Form = styled.form`
-  max-width: 380px;
-  margin: 0 auto;
-  padding: ${props => props.theme.spacing.s}rem;
-  display: flex;
-  flex-direction: column;
+interface InputFieldProps {
+  hasValue?: boolean;
+  required?: boolean;
+  textarea?: boolean;
+}
+
+export const Wrapper = styled.div<{ disabled: boolean }>`
+  transition: opacity 0.1s ease-in-out;
+  ${props =>
+    props.disabled &&
+    css`
+      opacity: 0.5;
+    `};
 `;
 
 export const Label = styled.label`
@@ -20,22 +27,22 @@ export const Label = styled.label`
 
 export const StyledLabelText = styled.span`
   width: 40%;
-  border: 1px solid ${props => props.theme.colors.secondary};
-  color: ${props => props.theme.colors.secondary};
+  background-color: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.onSecondary};
   padding: 0 32px;
   height: 40px;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
-  ${props => createFontStyles(props.theme.fonts.b2)};
 `;
 
-export const StyledInput = styled.input`
+export const StyledInput = styled.input<InputFieldProps>`
   height: 40px;
   width: 60%;
   background-color: ${props => props.theme.colors.background};
   border: 1px solid ${props => props.theme.colors.primaryVariant};
+  border-left: none;
   border-bottom: 2px solid ${props => props.theme.colors.primary};
   padding: 0 32px;
   outline: none;
@@ -61,9 +68,15 @@ export const StyledInput = styled.input`
   &:placeholder-shown {
     border: 1px solid ${props => props.theme.colors.primaryVariant};
   }
-`;
-
-export const Loader = styled.span`
-  ${props => createFontStyles(props.theme.fonts.b1)};
-  color: ${props => props.theme.colors.secondaryVariant};
+  ${props =>
+    props.hasValue &&
+    css`
+      border-color: ${props.theme.colors.primaryVariant};
+    `};
+  ${props =>
+    props.textarea &&
+    css`
+      padding: 0.75rem;
+      height: 180px;
+    `};
 `;

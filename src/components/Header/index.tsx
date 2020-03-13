@@ -1,25 +1,28 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import { Header, Nav } from './styles';
+import { Wrapper, Nav } from './styles';
+import ThemeWrapper from '../ThemeWrapper';
 
-const Navigation: React.FC = () => {
+const Header: React.FC = () => {
   return (
-    <Header>
-      <Nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/news">News List</Link>
-          </li>
-        </ul>
-      </Nav>
-    </Header>
+    <ThemeWrapper>
+      <Wrapper>
+        <Nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+            <li>
+              <Link to="/news">News List</Link>
+            </li>
+          </ul>
+        </Nav>
+      </Wrapper>
+    </ThemeWrapper>
   );
 };
 
-export default Navigation;
+export default Header;

@@ -1,8 +1,17 @@
+export interface FontMediaQuery {
+  query: number;
+  family?: string;
+  weight?: number;
+  size?: number;
+  lineHeight?: number;
+}
+
 export interface Font {
   family: string;
   weight: number;
   size: number;
   lineHeight?: number;
+  mediaQueries?: FontMediaQuery[];
 }
 
 export interface IMediaQueries {
