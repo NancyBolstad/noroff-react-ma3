@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import createFontStyles from '../../util/createFontStyles';
-import createMediaQuery from '../../util/createMediaQuery';
 import setColorOpacity from '../../util/setColorOpacity';
 
 type Size = 'small' | 'medium' | 'large';
@@ -15,7 +14,6 @@ const Button = styled.button<ButtonProps>`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 30px;
   cursor: pointer;
   text-decoration: none;
   width: fit-content;
@@ -37,12 +35,10 @@ const Button = styled.button<ButtonProps>`
       min-width: 75px;
       padding: 0 32px;
       ${createFontStyles(props.theme.fonts.b2)};
-      ${createMediaQuery(
-        'small',
-        css`
-          padding: 0 20px;
-        `,
-      )}
+
+      @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
+        padding: 0 20px;
+      }
     `};
   ${props =>
     props.size === 'medium' &&
@@ -51,12 +47,10 @@ const Button = styled.button<ButtonProps>`
       width: 100%;
       padding: 0 20px;
       ${createFontStyles(props.theme.fonts.b2)};
-      ${createMediaQuery(
-        'small',
-        css`
-          width: 160px;
-        `,
-      )}
+
+      @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
+        width: 160px;
+      }
     `};
   ${props =>
     props.size === 'large' &&
@@ -67,12 +61,10 @@ const Button = styled.button<ButtonProps>`
       padding-right: 75px;
       border-radius: 35px;
       ${createFontStyles(props.theme.fonts.b3)};
-      ${createMediaQuery(
-        'small',
-        css`
-          height: 50px;
-        `,
-      )}
+
+      @media all and (min-width: ${props => props.theme.mediaQueries.small}px) {
+        height: 50px;
+      }
     `};
   ${props =>
     props.variant === 'primary' &&
@@ -82,7 +74,7 @@ const Button = styled.button<ButtonProps>`
       &:hover,
       &:active,
       &:focus {
-        background-color: ${props => props.theme.colors.secondaryVariant};
+        opacity: 0.9;
       }
       svg {
         fill: ${props => props.theme.colors.onPrimary};
