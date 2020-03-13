@@ -1,31 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Login from './Login';
 import News from './News';
+import Header from '../components/Header';
 
 interface Props {}
 
 const Layout: React.FunctionComponent<Props> = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-            <li>
-              <Link to="/news">News</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
-                renders the first one that matches the current URL. */}
+        <Header />
         <Switch>
           <Route path="/login">
             <Login />
@@ -38,7 +24,7 @@ const Layout: React.FunctionComponent<Props> = () => {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 
