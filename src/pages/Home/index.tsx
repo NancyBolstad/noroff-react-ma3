@@ -11,7 +11,7 @@ interface Props {}
 export const Home: React.FunctionComponent<Props> = () => {
   return (
     <ThemeWrapper>
-      <Heading content="Noroff React App Module Assignment 3" isPrimaryColor />
+      <Heading content="Noroff React App" isPrimaryColor />
       <HomeContent>
         <ImageGrid images={[mockImage, mockImage, mockImage]} />
         <NewsList />
