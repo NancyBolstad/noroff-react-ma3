@@ -14,7 +14,7 @@ const Navigation: React.FC = () => {
             <Link to="/login">Login</Link>
           </li>
           <li>
-            <Link to="/news">News</Link>
+            <Link to="/news">News List</Link>
           </li>
         </ul>
       </Nav>
