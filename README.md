@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bdd0f41d-e9f1-4a07-8e42-3cb2b40eaf37/deploy-status)](https://app.netlify.com/sites/zen-kalam-ccfab6/deploys)
+
+Github page: https://nancybolstad.github.io/noroff-react-ma3/
+
 ## Available Scripts
 
 In the project directory, you can run:
