@@ -2,15 +2,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bdd0f41d-e9f1-4a07-8e42-3cb2b40eaf37/deploy-status)](https://app.netlify.com/sites/zen-kalam-ccfab6/deploys)
 
-## :satellite: This react apo has two environment:
+## :satellite: This react apo has two environments:
 
-### Github page && master branch [production]:
+### 1. Github page && master branch [production]:
 
 Visit:https://nancybolstad.github.io/noroff-react-ma3/
 
 This is served from the master branch. It includes all the basic requirements for this module assignment.
 
-### Netlify && staging branch [development]:
+### 2. Netlify && staging branch [development]:
 
 Visit: https://zen-kalam-ccfab6.netlify.com/
 
