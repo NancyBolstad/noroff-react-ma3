@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### 1. Github page && master branch [production]:
 
-Visit:https://nancybolstad.github.io/noroff-react-ma3/
+Visit: https://nancybolstad.github.io/noroff-react-ma3/
 
 This is served from the master branch. It includes all the basic requirements for this module assignment.
 
