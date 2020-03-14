@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.header`
   width: 100%;
-  height: 78px;
   background: ${props => props.theme.colors.secondaryVariant};
   color: ${props => props.theme.colors.onSecondary};
 `;
@@ -39,7 +38,7 @@ export const NavLink = styled(Link)`
 export const LoginButton = styled(NavLink)`
   border: 2px solid ${props => props.theme.colors.onSecondary};
   list-text-style: none;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1.5rem;
 `;
 
 export const MenuLeft = styled.div`
