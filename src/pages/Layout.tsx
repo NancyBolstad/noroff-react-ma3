@@ -1,34 +1,46 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from './Home';
-import Login from './Login';
-import News from './News';
+import ThemeWrapper from '../components/ThemeWrapper';
 import Header from '../components/Header';
-import Profile from '../pages/Profile';
+
+const Home = lazy(() => import('./Home'));
+const News = lazy(() => import('./News'));
+const Login = lazy(() => import('./Login'));
+const Profile = lazy(() => import('./Profile'));
 
 interface Props {}
 
 const Layout: React.FunctionComponent<Props> = () => {
   return (
-    <BrowserRouter>
-      <div>
-        <Header />
-        <Switch>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/news">
-            <News />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </BrowserRouter>
+    <ThemeWrapper>
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Switch>
+            <Route path="/profile">
+              <Suspense fallback={<h1>Hellow</h1>}>
+                <Profile />
+              </Suspense>
+            </Route>
+            <Route path="/login">
+              <Suspense fallback={<h1>Hellow</h1>}>
+                <Login />
+              </Suspense>
+            </Route>
+            <Route path="/news">
+              <Suspense fallback={<h1>Hellow</h1>}>
+                <News />
+              </Suspense>
+            </Route>
+            <Route path="/">
+              <Suspense fallback={<h1>Hellow</h1>}>
+                <Home />
+              </Suspense>
+            </Route>
+          </Switch>
+        </div>
+      </BrowserRouter>
+    </ThemeWrapper>
   );
 };
 

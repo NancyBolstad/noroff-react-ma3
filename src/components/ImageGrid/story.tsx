@@ -4,7 +4,7 @@ import { ImageGrid } from '.';
 
 export const mockImage = {
   imageURL:
-    'https://res.cloudinary.com/oyvindhermansen/image/upload/v1568385948/qfwh7yghtj5buvssnvzc.jpg',
+    'https://images.unsplash.com/photo-1584088634200-52239888d599?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1301&q=80',
 };
 
 export const ImageGridStory = (

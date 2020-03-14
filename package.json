@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "repository": "git@github.com/NancyBolstad/noroff-react-ma3.git",
-  "homepage": "http://gitname.github.io/noroff-react-ma3",
   "author": "Nancy Bolstad <litchacha@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -34,7 +33,8 @@
     "build-storybook": "build-storybook -s public",
     "ts-dev": "tsc --watch --incremental",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "serve": "react-scripts build && serve -s build"
   },
   "eslintConfig": {
     "extends": "react-app"
