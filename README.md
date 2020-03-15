@@ -33,6 +33,8 @@ This is deployed from the staging branch. It includes additional features that w
 - [ ] Dashboard after login
 - [ ] Add 404 error page
 - [ ] Jest test
+- [ ] Adding Google Custom Search
+- [ ] Testing SEO using Fetch as Google
 
 ## :paperclip: Available Scripts
 
