@@ -31,6 +31,7 @@ This is deployed from the staging branch. It includes additional features that w
 - [x] Access local storage
 - [ ] Dark/light mode toggle
 - [ ] Dashboard after login
+- [ ] Add 404 error page
 - [ ] Jest test
 
 ## Available Scripts
