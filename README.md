@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## :satellite: This react apo has two environments:
 
-### 1. Github page && master branch [production]:
+### 1. Github page & master branch [production]:
 
 Visit: https://nancybolstad.github.io/noroff-react-ma3/
 
@@ -19,7 +19,7 @@ This is served from the master branch. It includes all the compulsory requiremen
 - Lazy load components (with react.lazy and suspense).
 - Automated workflow: Github workflow and Netlify.
 
-### 2. Netlify && staging branch [development]:
+### 2. Netlify & staging branch [development]:
 
 Visit: https://zen-kalam-ccfab6.netlify.com/
 
