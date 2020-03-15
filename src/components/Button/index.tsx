@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import createFontStyles from '../../util/createFontStyles';
-import setColorOpacity from '../../util/setColorOpacity';
 
 type Size = 'small' | 'medium' | 'large';
 type Variant = 'primary' | 'secondary' | 'tertiary' | 'quaternary';
@@ -108,7 +107,7 @@ const Button = styled.button<ButtonProps>`
       &:hover,
       &:active,
       &:focus {
-        background-color: ${props => setColorOpacity(props.theme.colors.background, '0.8')};
+        opacity: 0.8;
       }
       svg {
         fill: ${props => props.theme.colors.onBackground};
