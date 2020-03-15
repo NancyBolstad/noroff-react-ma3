@@ -34,7 +34,7 @@ This is deployed from the staging branch. It includes additional features that w
 - [ ] Add 404 error page
 - [ ] Jest test
 
-## Available Scripts
+## :paperclip: Available Scripts
 
 In the project directory, you can run:
 
