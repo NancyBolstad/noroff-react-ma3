@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Heading from '../../components/Heading';
+import Typography from '../../components/Typography';
 import HomeContent from '../../components/HomeContent';
 import NewsList from '../../components/NewsList';
 
@@ -8,9 +8,9 @@ interface Props {}
 export const Profile: React.FunctionComponent<Props> = () => {
   return (
     <>
-      <Heading content="Welcome back!" isPrimaryColor />
+      <Typography element="h1" variant="h1" content="Welcome back!" align="center" isPrimaryColor />
       <HomeContent>
-        <NewsList />
+        <NewsList twoColumns />
       </HomeContent>
     </>
   );

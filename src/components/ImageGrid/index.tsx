@@ -1,6 +1,6 @@
 import React, { lazy, Suspense } from 'react';
 import Grid, { GridItem } from '../Grid';
-import Heading from '../Heading';
+import Typography from '../Typography';
 import ImageItem from './styles';
 
 const LazyImage = lazy(() => import('./styles'));
@@ -13,7 +13,7 @@ interface Props {
 export const ImageGrid: React.FunctionComponent<Props> = ({ images, text }) => {
   return (
     <>
-      {!!text && <Heading content={text} />}
+      {!!text && <Typography element="h2" variant="h2" content={text} />}
       <Grid>
         {(images || []).map((image, k) => (
           <GridItem

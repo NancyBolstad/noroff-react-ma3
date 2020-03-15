@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const Grid = styled.div`
+export const Grid = styled.div`
   display: grid;
   grid-gap: ${props => props.theme.spacing.xs}rem;
   grid-auto-rows: 260px;
@@ -19,7 +19,7 @@ interface GridItemProps {
   background?: string;
 }
 
-const GridItem = styled.div<GridItemProps>`
+export const GridItem = styled.div<GridItemProps>`
   background-color: ${props => props.theme.colors.surface};
   display: flex;
   ${props =>
@@ -44,4 +44,3 @@ const GridItem = styled.div<GridItemProps>`
 `;
 
 export default Grid;
-export { GridItem };

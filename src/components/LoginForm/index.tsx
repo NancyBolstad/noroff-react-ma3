@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import { Form, StyledInput, Label, StyledLabelText, ErrorMessage } from './styles';
 import Button from '../Button';
-import Heading from '../Heading';
+import Typography from '../Typography';
 import LoginSchema from '../../util/schema';
 
 interface Props {}
@@ -25,7 +25,7 @@ const LoginForm: React.FC<Props> = () => {
   //@ts-ignore
   return (
     <>
-      <Heading content="Login" isPrimaryColor />
+      <Typography element="h1" variant="h1" content="Login" isPrimaryColor align="center" />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Label>
           <StyledLabelText>Username</StyledLabelText>

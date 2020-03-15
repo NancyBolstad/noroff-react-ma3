@@ -1,26 +1,30 @@
 import * as React from 'react';
 import { check } from '../../util/icons';
 import { Wrapper, ListFlexParent, ItemFlexChild, ItemTitleWrapper } from './styles';
-import Heading from '../Heading';
+import Typography from '../Typography';
 import mockCheckBoxList from './data';
 
-interface Props {}
+interface Props {
+  twoColumns?: boolean;
+}
 
-export const NewsList: React.FC<Props> = () => {
+export const NewsList: React.FC<Props> = ({ twoColumns }) => {
   const { sectionTitle, list } = mockCheckBoxList;
   return (
     <Wrapper>
-      <Heading content={sectionTitle} />
-      <ListFlexParent>
+      <Typography content={sectionTitle} element="h2" variant="h1" align="center" />
+      <ListFlexParent twoColumns={twoColumns}>
         {(list || []).map((box, index) => (
-          <ItemFlexChild key={index}>
+          <ItemFlexChild key={index} twoColumns={twoColumns}>
             {!!box.title && (
               <ItemTitleWrapper>
                 {check}
-                <h2>{box.title}</h2>
+                <Typography element="h3" variant="h3" isPrimaryColor content={box.title} />
               </ItemTitleWrapper>
             )}
-            {!!box.content && <p>{box.content}</p>}
+            {!!box.content && (
+              <Typography element="p" variant="b1" isPrimaryColor content={box.content} />
+            )}
           </ItemFlexChild>
         ))}
       </ListFlexParent>

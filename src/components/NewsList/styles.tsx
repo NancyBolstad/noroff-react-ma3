@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -7,24 +7,40 @@ export const Wrapper = styled.div`
   overflow: auto;
 `;
 
-export const ListFlexParent = styled.ul`
+export const ListFlexParent = styled.ul<{ twoColumns?: boolean }>`
   width: 100%;
-  max-width: 680px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: ${props => props.theme.spacing.m}rem ${props => props.theme.spacing.xl}rem;
   display: flex;
   flex-direction: column;
+
+  ${props =>
+    props.twoColumns &&
+    css`
+      @media all and (min-width: ${props => props.theme.mediaQueries.medium}px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    `}
 `;
 
-export const ItemFlexChild = styled.li`
+export const ItemFlexChild = styled.li<{ twoColumns?: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  margin-bottom: ${props => props.theme.spacing.s}rem;
   width: 100%;
-  p {
-    max-width: 615px;
-  }
+  margin-bottom: ${props => props.theme.spacing.s}rem;
+  padding: 0;
+
+  ${props =>
+    props.twoColumns &&
+    css`
+      @media all and (min-width: ${props => props.theme.mediaQueries.medium}px) {
+        width: 50%;
+        padding: ${props => props.theme.spacing.s}rem;
+      }
+    `}
 `;
 
 export const ItemTitleWrapper = styled.div`
