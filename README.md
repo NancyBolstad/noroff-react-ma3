@@ -8,13 +8,30 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Visit: https://nancybolstad.github.io/noroff-react-ma3/
 
-This is served from the master branch. It includes all the basic requirements for this module assignment.
+This is served from the master branch. It includes all the compulsory requirements for this module assignment.
+
+#### Features:
+
+- TypeScript for development and Storybook for UI testing.
+- Routing with react-router-dom.
+- Used react-hook-form and yup for creating a simple login form.
+- Theme components via the <ThemeProvider> wrapper component, provided by Styled Components.
+- Lazy load components (with react.lazy and suspense).
+- Automated workflow: Github workflow and Netlify.
 
 ### 2. Netlify && staging branch [development]:
 
 Visit: https://zen-kalam-ccfab6.netlify.com/
 
-This is deployed from the staging branch. It includes additional features that will be included in the next release version.
+This is deployed from the staging branch. It includes additional features that will be included in the next release.
+
+#### Features in the next release:
+
+- [x] Use Fetch API service
+- [x] Access local storage
+- [ ] Dark/light mode toggle
+- [ ] Dashboard after login
+- [ ] Jest test
 
 ## Available Scripts
 
@@ -24,6 +41,11 @@ In the project directory, you can run:
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `yarn serve`
+
+Deploy the website on local server. Make sure that you have installed serve.
+Read more about [Deployment in local environment](https://create-react-app.dev/docs/deployment/) for more information.
 
 ### `yarn storybook`
 
@@ -37,6 +59,13 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
+
+### `yarn deploy`
+
+Deploy the app on GitHub Pages site. This requires to include information about the homepage's URL in the package.json file.
+
+For example:
+"homepage": "http://gitname.github.io/noroff-react-ma3",
 
 ### `yarn eject`
 
