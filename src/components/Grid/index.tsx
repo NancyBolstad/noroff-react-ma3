@@ -20,7 +20,7 @@ interface GridItemProps {
 }
 
 const GridItem = styled.div<GridItemProps>`
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.surface};
   display: flex;
   ${props =>
     props.column &&
