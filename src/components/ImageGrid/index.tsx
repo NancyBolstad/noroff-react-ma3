@@ -1,25 +1,12 @@
-import * as React from 'react';
-import styled, { css } from 'styled-components';
+import React, { lazy, Suspense } from 'react';
 import Grid, { GridItem } from '../Grid';
 import Heading from '../Heading';
+import ImageItem from './styles';
 
-interface Image {
-  imageURL: string;
-}
-
-const ImageItem = styled.div<Image>`
-  width: 100%;
-  ${props =>
-    props.imageURL &&
-    css`
-      background-image: url(${props.imageURL});
-      background-size: cover;
-      background-position: center;
-    `};
-`;
+const LazyImage = lazy(() => import('./styles'));
 
 interface Props {
-  images: Image[];
+  images?: string[];
   text?: string;
 }
 
@@ -28,13 +15,15 @@ export const ImageGrid: React.FunctionComponent<Props> = ({ images, text }) => {
     <>
       {!!text && <Heading content={text} />}
       <Grid>
-        {images.map((image, k) => (
+        {(images || []).map((image, k) => (
           <GridItem
             key={k}
             row={k === 0 || k === 3 ? 'span 2' : undefined}
             column={k === 0 ? 'span 2' : k === 3 ? 'span 3' : undefined}
           >
-            <ImageItem imageURL={image.imageURL} />
+            <Suspense fallback={<ImageItem />}>
+              <LazyImage imageURL={image} />
+            </Suspense>
           </GridItem>
         ))}
       </Grid>
