@@ -107,7 +107,7 @@ const Button = styled.button<ButtonProps>`
       &:hover,
       &:active,
       &:focus {
-        opacity:0.8};
+        opacity: 0.8;
       }
       svg {
         fill: ${props => props.theme.colors.onBackground};
