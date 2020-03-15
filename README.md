@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bdd0f41d-e9f1-4a07-8e42-3cb2b40eaf37/deploy-status)](https://app.netlify.com/sites/zen-kalam-ccfab6/deploys)
 
-## :satellite: This react apo has two environments:
+## :satellite: This react app has two environments:
 
 ### 1. Github page & master branch [production]:
 
